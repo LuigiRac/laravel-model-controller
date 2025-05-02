@@ -1,11 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <ul>
-        @foreach ($movies as $movie)
-            <li>
-                {{$movie}}
-            </li>
-        @endforeach
-    </ul>
+ <div class="row movies-container">
+    @foreach ($movies as $movie)
+    <x-card :movie="$movie"></x-card>
+    @endforeach
+ </div>
 @endsection
